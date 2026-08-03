@@ -222,10 +222,10 @@ class ContactManager {
 }
 
 /**
- * Class untuk simulasi fluktuasi angka pengguna online
+ * Class untuk simulasi fluktuasi angka pengguna online secara alami & realistis
  */
 class OnlineCounterManager {
-  constructor(elementId, initialCount = 128) {
+  constructor(elementId, initialCount = 124) {
     this.countEl = document.getElementById(elementId);
     this.currentCount = initialCount;
     this.init();
@@ -234,12 +234,24 @@ class OnlineCounterManager {
   init() {
     if (!this.countEl) return;
 
-    setInterval(() => {
-      // Perubahan acak: -2, -1, 0, +1, atau +2
-      const delta = Math.floor(Math.random() * 5) - 2;
-      this.currentCount = Math.max(90, this.currentCount + delta);
+    const updateCounter = () => {
+      // 1. Tentukan lonjakan angka acak (-6 sampai +7)
+      const variations = [-6, -4, -2, -1, 0, 0, 1, 2, 3, 5, 7];
+      const delta = variations[Math.floor(Math.random() * variations.length)];
+      
+      // Batasi rentang angka agar tetap masuk akal (misal: antara 85 - 160)
+      this.currentCount = Math.min(160, Math.max(85, this.currentCount + delta));
+      
+      // Update angka di layar
       this.countEl.textContent = this.currentCount;
-    }, 4000);
+
+      // 2. Acak jeda waktu pembaruan berikutnya (antara 2.5 hingga 7.5 detik)
+      const nextInterval = Math.floor(Math.random() * 5000) + 2500;
+      setTimeout(updateCounter, nextInterval);
+    };
+
+    // Jalankan pembaruan pertama
+    updateCounter();
   }
 }
 

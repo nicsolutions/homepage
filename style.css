@@ -940,3 +940,42 @@ footer .flinks a:hover {
   outline: 2px solid var(--cyan);
   outline-offset: 3px;
 }
+
+/* ============ ANIMASI LOGO LUB-DUB (DETAK JANTUNG) ============ */
+.brand img,
+.core-card img,
+footer .fbrand img {
+  animation: logoGlowPulse 1.1s cubic-bezier(.4, 0, .2, 1) infinite;
+}
+
+/* Pola lub-dub: dua denyut cepat berturut-turut lalu jeda,
+   meniru siklus sistol-diastol jantung sungguhan (~55 bpm) */
+@keyframes logoGlowPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 2px rgba(255, 201, 60, .5), 0 0 24px rgba(255, 201, 60, .45);
+  }
+  /* "Lub" — kontraksi kuat pertama */
+  9% {
+    transform: scale(1.14);
+    box-shadow: 0 0 0 3px rgba(255, 201, 60, .85), 0 0 42px rgba(255, 201, 60, .85);
+  }
+  18% {
+    transform: scale(1);
+    box-shadow: 0 0 0 2px rgba(255, 201, 60, .5), 0 0 24px rgba(255, 201, 60, .45);
+  }
+  /* "Dub" — kontraksi kedua, sedikit lebih lemah */
+  27% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 3px rgba(255, 201, 60, .7), 0 0 34px rgba(255, 201, 60, .65);
+  }
+  38% {
+    transform: scale(1);
+    box-shadow: 0 0 0 2px rgba(255, 201, 60, .5), 0 0 24px rgba(255, 201, 60, .45);
+  }
+  /* Jeda diastol — jantung "istirahat" sebelum siklus berikutnya */
+  95% {
+    transform: scale(1);
+    box-shadow: 0 0 0 2px rgba(255, 201, 60, .5), 0 0 24px rgba(255, 201, 60, .45);
+  }
+}

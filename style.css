@@ -979,3 +979,101 @@ footer .fbrand img {
     box-shadow: 0 0 0 2px rgba(255, 201, 60, .5), 0 0 24px rgba(255, 201, 60, .45);
   }
 }
+
+/* ============ GANTUNGAN KUNCI ONLINE COUNTER (Melayang / Fixed) ============ */
+.keychain-badge {
+  /* Mengubah posisi menjadi fixed agar melayang dan selalu terlihat saat di-scroll */
+  position: fixed;
+  top: 18px;            /* Jarak dari atas layar */
+  right: 24px;          /* Jarak dari kanan layar (bisa disesuaikan) */
+  z-index: 99;          /* Memastikan selalu berada di atas elemen lain */
+  
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  animation: keychainSway 4s ease-in-out infinite alternate;
+  transform-origin: top center;
+  pointer-events: auto;
+}
+
+/* Cincin gantungan kunci */
+.keychain-ring {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 201, 60, 0.6);
+  background: var(--void);
+}
+
+/* Tali/Rantai gantungan */
+.keychain-string {
+  width: 2px;
+  height: 12px;
+  background: linear-gradient(to bottom, var(--gold), var(--cyan));
+}
+
+/* Badge kaca utama */
+.keychain-body {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: rgba(10, 14, 34, 0.85); /* Dibuat sedikit lebih pekat agar tetap terbaca jelas */
+  border: 1px solid var(--glass-brd);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(46, 230, 255, 0.25);
+}
+
+/* Lampu indikator hijau live */
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 8px #00ff88;
+  animation: liveGlow 1.5s ease-in-out infinite;
+}
+
+.online-count {
+  font-family: var(--disp);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--cyan);
+  letter-spacing: 0.5px;
+}
+
+.online-label {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+/* Penyesuaian Posisi Gantungan Kunci di Layar HP (Mobile) */
+@media (max-width: 560px) {
+  .keychain-badge {
+    top: 12px;
+    right: 16px;
+  }
+}
+
+/* Animasi bergoyang (Swaying Effect) */
+@keyframes keychainSway {
+  0% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
+}
+
+/* Animasi kedip lampu indikator */
+@keyframes liveGlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+}

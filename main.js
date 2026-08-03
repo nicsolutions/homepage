@@ -222,6 +222,28 @@ class ContactManager {
 }
 
 /**
+ * Class untuk simulasi fluktuasi angka pengguna online
+ */
+class OnlineCounterManager {
+  constructor(elementId, initialCount = 128) {
+    this.countEl = document.getElementById(elementId);
+    this.currentCount = initialCount;
+    this.init();
+  }
+
+  init() {
+    if (!this.countEl) return;
+
+    setInterval(() => {
+      // Perubahan acak: -2, -1, 0, +1, atau +2
+      const delta = Math.floor(Math.random() * 5) - 2;
+      this.currentCount = Math.max(90, this.currentCount + delta);
+      this.countEl.textContent = this.currentCount;
+    }, 4000);
+  }
+}
+
+/**
  * Inisialisasi Utama Aplikasi
  */
 class App {
@@ -236,6 +258,7 @@ class App {
     new CircuitBackground('circuit-canvas');
     new ScrollObserver('.reveal');
     new ContactManager('phoneLine', 'toast', '082149094777');
+    new OnlineCounterManager('onlineCount', 128);
   }
 }
 

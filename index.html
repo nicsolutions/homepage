@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>NIC Computer Solutions — Solusi Cepat, Kinerja Optimal</title>
+  <meta name="description" content="Layanan perbaikan komputer, printer, dan jaringan dengan teknisi berpengalaman. Menyediakan jasa pembuatan aplikasi desktop & web untuk bisnis.">
+  <meta name="keywords" content="servis komputer, servis printer, teknisi jaringan, buat aplikasi, servis IT, NIC Computer Solutions">
+  <meta name="author" content="NIC Computer Solutions">
+
+  <!-- Open Graph / Social Media Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nic-computersolutions.com/">
+  <meta property="og:title" content="NIC Computer Solutions — Solusi Cepat, Kinerja Optimal">
+  <meta property="og:description" content="Perbaikan komputer, printer, dan jaringan dengan teknisi berpengalaman. Garansi 30 hari & layanan panggilan.">
+  <meta property="og:image" content="logo.png">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NIC Computer Solutions — Solusi Cepat, Kinerja Optimal">
+  <meta name="twitter:description" content="Perbaikan komputer, printer, dan jaringan dengan teknisi berpengalaman. Garansi 30 hari.">
+  <meta name="twitter:image" content="logo.png">
+
+  <!-- Favicons & Icons -->
+  <link rel="icon" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="circuit-canvas"></canvas>
+  <div class="glow-blob b1"></div>
+  <div class="glow-blob b2"></div>
+  <div class="glow-blob b3"></div>
+  <div class="noise-overlay"></div>
+
+  <div class="content">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="brand">
+        <img src="logo.png" alt="Logo NIC Computer Solutions">
+        <div>
+          <div class="brand-name">NIC COMPUTER SOLUTIONS</div>
+          <div class="brand-tag">Solusi Cepat · Kinerja Optimal</div>
+        </div>
+      </div>
+
+      <!-- Gantungan Kunci Status Online -->
+      <div class="keychain-badge" title="Pengguna aktif saat ini">
+        <div class="keychain-ring"></div>
+        <div class="keychain-string"></div>
+        <div class="keychain-body">
+          <span class="live-dot"></span>
+          <span class="online-count" id="onlineCount">128</span>
+          <span class="online-label">ONLINE</span>
+        </div>
+      </div>
+
+      <a class="nav-cta" href="https://wa.me/6282149094777" target="_blank" rel="noopener noreferrer">
+        Chat WhatsApp →
+      </a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Servis IT On-Demand</div>
+        <h1>Perangkat rewel?<br><span class="grad">Kami turun tangan,</span><br>cepat &amp; tuntas.</h1>
+        <p class="lead">Perbaikan komputer, printer, dan jaringan dengan teknisi berpengalaman — plus jasa pembuatan aplikasi desktop &amp; web untuk bisnis yang ingin naik level.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://wa.me/6282149094777" target="_blank" rel="noopener noreferrer">⚡ Konsultasi Gratis</a>
+          <a class="btn btn-ghost" href="#layanan">Lihat Layanan</a>
+        </div>
+        <div class="badges-row">
+          <div class="badge-pill"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span><strong>Teknisi</strong>&nbsp;berpengalaman</div>
+          <div class="badge-pill"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>Garansi <strong>30 hari</strong></div>
+          <div class="badge-pill"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><strong>Cepat</strong>&nbsp;&amp; tepat waktu</div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="rig">
+          <div class="ring r1"><span class="node"></span></div>
+          <div class="ring r2"><span class="node" style="background:var(--magenta);box-shadow:0 0 14px var(--magenta),0 0 30px var(--magenta);"></span></div>
+          <div class="ring r3"></div>
+          <div class="core-card glass">
+            <img src="logo.png" alt="Logo NIC">
+            <span class="core-label">Solusi Digital</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAYANAN -->
+    <section class="section" id="layanan">
+      <div class="section-head reveal">
+        <div class="eyebrow">Layanan Kami</div>
+        <h2>Empat jalur bantuan, satu tim yang sama.</h2>
+        <p>Dari komputer yang blue screen sampai jaringan kantor yang lambat — kami petakan masalahnya, lalu selesaikan.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass reveal" style="--card-accent:#2ee6ff;">
+          <div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Perbaikan Komputer</h3>
+          <ul>
+            <li>Perbaikan PC / All in One</li>
+            <li>Instalasi &amp; upgrade hardware</li>
+            <li>Instalasi software (Windows &amp; aplikasi)</li>
+            <li>Bersihkan virus &amp; optimasi sistem</li>
+            <li>Atasi blue screen / booting error</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass reveal" style="--card-accent:#c07bff;">
+          <div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18h12v4H6z"/><rect x="4" y="9" width="16" height="8" rx="1"/></svg></div>
+          <h3>Perbaikan Printer</h3>
+          <ul>
+            <li>Printer tidak mau print / paper jam</li>
+            <li>Hasil print bergaris / putus-putus</li>
+            <li>Reset &amp; maintenance printer</li>
+            <li>Isi ulang tinta &amp; penggantian sparepart</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass reveal" style="--card-accent:#3de6b4;">
+          <div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14 0M8.5 16a6 6 0 0 1 7 0M2 8.82a16 16 0 0 1 20 0"/><circle cx="12" cy="20" r="1"/></svg></div>
+          <h3>Pemasangan Jaringan</h3>
+          <ul>
+            <li>Instalasi &amp; konfigurasi LAN / Wi-Fi</li>
+            <li>Setting router, access point, switch</li>
+            <li>Sharing internet, file &amp; printer</li>
+            <li>Troubleshoot koneksi lambat / putus</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass reveal" style="--card-accent:#ffc93c;">
+          <div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M9 9l-2 2 2 2M15 9l2 2-2 2"/></svg></div>
+          <h3>Aplikasi Desktop &amp; Web</h3>
+          <ul>
+            <li>Aplikasi bisnis custom, sesuai kebutuhan</li>
+            <li>Akses via browser maupun desktop</li>
+            <li>Responsif di laptop, tablet, smartphone</li>
+            <li>Dilengkapi sistem keamanan data</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROSES -->
+    <section class="section">
+      <div class="section-head reveal">
+        <div class="eyebrow">Alur Kerja</div>
+        <h2>Empat langkah, dari keluhan sampai selesai.</h2>
+      </div>
+      <div class="proses-track reveal">
+        <div class="proses-line"></div>
+        <div class="proses-step">
+          <div class="num">01</div>
+          <h4>Konsultasi</h4>
+          <p>Sampaikan masalah perangkat Anda ke tim kami.</p>
+        </div>
+        <div class="proses-step">
+          <div class="num">02</div>
+          <h4>Cek &amp; Diagnosa</h4>
+          <p>Kami periksa dan pastikan akar permasalahannya.</p>
+        </div>
+        <div class="proses-step">
+          <div class="num">03</div>
+          <h4>Perbaikan</h4>
+          <p>Proses perbaikan dikerjakan oleh teknisi berpengalaman.</p>
+        </div>
+        <div class="proses-step">
+          <div class="num">04</div>
+          <h4>Uji &amp; Selesai</h4>
+          <p>Diuji ulang sampai dipastikan berfungsi normal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APLIKASI -->
+    <section class="section">
+      <div class="apps-panel glass reveal">
+        <div class="apps-panel-inner">
+          <div class="apps-copy">
+            <div class="eyebrow">Solusi Aplikasi</div>
+            <h3>Satu aplikasi, seluruh operasional bisnis.</h3>
+            <p>Dashboard interaktif, multi-device, dan bisa dikustom penuh — desain, branding, sampai integrasi ke sistem lain yang sudah Anda pakai.</p>
+          </div>
+          <div class="apps-chips">
+            <span class="app-chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>POS / Kasir</span>
+            <span class="app-chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h4"/></svg>Akuntansi</span>
+            <span class="app-chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg>Inventory</span>
+            <span class="app-chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 1 0 7.75"/></svg>CRM</span>
+            <span class="app-chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>HRIS</span>
+            <span class="app-chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Project Management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+    <section class="section">
+      <div class="section-head reveal">
+        <div class="eyebrow">Kenapa NIC</div>
+        <h2>Empat alasan klien tetap kembali.</h2>
+      </div>
+      <div class="adv-grid">
+        <div class="adv-card glass reveal">
+          <span class="num-mark">KECEPATAN</span>
+          <h4>Cepat</h4>
+          <p>Pengerjaan gesit agar aktivitas Anda tidak lama tertunda.</p>
+        </div>
+        <div class="adv-card glass reveal">
+          <span class="num-mark">KEAMANAN</span>
+          <h4>Aman</h4>
+          <p>Data Anda tetap terjaga selama proses perbaikan berlangsung.</p>
+        </div>
+        <div class="adv-card glass reveal">
+          <span class="num-mark">KEAHLIAN</span>
+          <h4>Profesional</h4>
+          <p>Teknisi berpengalaman yang siap membantu kapan pun dibutuhkan.</p>
+        </div>
+        <div class="adv-card glass reveal">
+          <span class="num-mark">HARGA</span>
+          <h4>Terjangkau</h4>
+          <p>Harga kompetitif tanpa mengorbankan kualitas hasil kerja.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="cta-panel glass reveal">
+        <div>
+          <h2>Perangkat bermasalah? <span class="grad" style="background:linear-gradient(95deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent;">Kami solusinya.</span></h2>
+          <p>Layanan panggilan ke lokasi Anda, garansi servis hingga 30 hari. Hubungi sekarang untuk respons cepat.</p>
+        </div>
+        <div class="cta-right">
+          <a class="phone-line" href="https://wa.me/6282149094777" target="_blank" rel="noopener noreferrer" id="phoneLine">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div>
+              <div class="lbl">WhatsApp — Fast Response</div>
+              <div class="num">0821 4909 4777</div>
+            </div>
+          </a>
+          <div class="badge-pill" style="padding-left:0;"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></span>Layanan panggilan, datang ke lokasi Anda</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="fbrand"><img src="logo.png" alt="Logo NIC">© <span id="year"></span> NIC Computer Solutions</div>
+      <div class="flinks">
+        <a href="https://wa.me/6282149094777" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://instagram.com/nic_computersolutions" target="_blank" rel="noopener noreferrer">@nic_computersolutions</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <div class="toast" id="toast">Nomor disalin: 0821 4909 4777</div>
+
+
+  <!-- EASTER EGG PENGUIN CONTAINER -->
+  <div id="penguin-container">
+    <div class="penguin-inner">
+      <span class="penguin-thought">💭</span>
+      <span class="penguin-emoji">🐧</span>
+      <span class="penguin-shadow"></span>
+    </div>
+  </div>
+
+  <!-- EASTER EGG: UFO PENCULIK PENGUIN -->
+  <div id="ufo-container">
+    <span class="ufo-beam"></span>
+    <span class="ufo-emoji">🛸</span>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>

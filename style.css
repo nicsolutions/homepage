@@ -3395,6 +3395,98 @@ footer .fbrand img {
     width: 30px;
     height: 30px;
   }
+
+  /* ============ EMBLEM JAM DIGITAL MELAYANG ============ */
+.float-clock {
+  position: fixed;
+  bottom: 24px;
+  left: 24px; /* Anda bisa mengganti left menjadi right jika ingin di kanan */
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px 8px 8px;
+  border-radius: 999px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+}
+
+.fc-ring {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fc-ring-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg); /* Memutar SVG agar animasi mulai dari atas */
+}
+
+.fc-ring-track {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 3;
+}
+
+.fc-ring-prog {
+  fill: none;
+  stroke: var(--cyan);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 122.5; /* Keliling lingkaran sesuai perhitungan JS Anda */
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.fc-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan);
+  z-index: 2;
+}
+
+.fc-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fc-time {
+  font-family: var(--disp);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+}
+
+.fc-sec {
+  font-size: 0.75rem;
+  color: var(--cyan);
+  margin-left: 2px;
+}
+
+.fc-date {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* Animasi menyembunyikan jam saat pengguna men-scroll layar (class ini ditrigger oleh JS Anda) */
+.float-clock.fc-compact {
+  transform: translateY(150px);
+  opacity: 0;
+}
   .fc-time {
     font-size: 13px;
   }
